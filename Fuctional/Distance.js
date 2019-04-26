@@ -1,0 +1,5 @@
+var utility=require('../Utility/new')
+const readline=require('readline-sync')
+var x=readline.question('enter the x value')
+var y=readline.question('enter the y value')
+utility.distance(x,y)
