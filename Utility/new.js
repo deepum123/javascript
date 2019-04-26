@@ -1,13 +1,14 @@
 module.exports = {
 
-    //string replace program
+    //1. User Input and Replace String Template “Hello <<UserName>>, How are you?”
+
     stringpro(s) {
         var s1 = 'Hello <<UserName>>, How are you ?';
         var s2 = s1.replace("<<UserName>>", s);
         console.log(s2);
     },
 
-    //leap year program
+    // 3.leap year program
     leapyear(y) {
         if ((y % 4 == 0 && y % 100 != 0) || (y % 400 == 0)) {
             console.log('this year is leap year')
@@ -17,7 +18,8 @@ module.exports = {
         }
     },
 
-    // power of two program
+    // 4 .power of Power of 2
+
     poweroftwo(p) {
         var pow = 1;
         for (let index = 0; index <= p; index++) {
@@ -56,7 +58,7 @@ module.exports = {
         }
     },
 
-    //flipcoin program 
+    //2. Flip Coin and print percentage of Heads and Tails
 
     flipcoin(f) {
         var win = 0;
@@ -102,7 +104,7 @@ module.exports = {
     },
 
 
-    // triplets finding program
+    // program of Sum of three Integer adds to ZERO
     triplets(arr) {
         for (let i = 0; i < arr.length - 2; i++) {
             for (let j = 0; j < arr.length - 1; j++) {
@@ -171,7 +173,7 @@ module.exports = {
         return arr
     },
 
-    // stop and start watch program
+    //  program of Simulate Stopwatch Program
 
     watch(start, stop) {
         var t;
@@ -241,7 +243,7 @@ module.exports = {
         return array
     },
 
-    // anagram program 
+    //  program of An Anagram Detection Example 
 
     anagram(s1, s2) {
 
