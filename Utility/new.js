@@ -83,9 +83,9 @@ module.exports = {
 
     //// coupon program 
     coupon(p) {
-        let arr = new Array(p);
+        let arr = []
         for (let index = 0; index < p; index++) {
-            var random = Math.floor(Math.random(p))
+            var random = Math.floor(Math.random()*p)
             arr[index] = random
 
             for (let index1 = 0; index1 < index; index1++) {
@@ -293,11 +293,87 @@ module.exports = {
         wind = 0;
         wind = 35.74 + 0.6215 * temp + (0.4275 * temp - 35.75) * Math.pow(speed, 0.16);
         console.log(wind)
+    },
+
+
+    //tic tac tae program 
+
+    tictactae() {
+
+
+        var turn = 'x'
+        var col
+        var row
+        var board = []
+        var str = ' '
+        var document
+        {
+            for (let i = 0; i < 3; i++) {
+                board.push([])
+                for (let j = 0; j < 3; j++) {
+                    board[i][j] = "_"
+                }
+            }
+            play()
+        }
+        function play() {
+
+            var playing = true
+            while (playing > 0) {
+                const read = require('readline-sync')
+                var row = read.question('enter the rows number')
+                var col = read.question(' enter the colum number')
+
+                board[row][col] = turn
+
+                if (gameover(row, col)) {
+                    playing = false;
+                    console.log("gameover player " + turn + " wins")
+                }
+                printboard();
+                if (turn === 'x')
+                    turn = 'o'
+                else
+                    turn = 'x'
+            }
+        }
+        function printboard() {
+            for (let i = 0; i < 3; i++) {
+
+                for (let j = 0; j < 3; j++) {
+                    if (j == 0)
+                        str += '| '
+                    str += board[i][j] + ' | ';
+
+
+                }
+                console.log(str);
+                str = ' ';
+
+
+            }
+            console.log('\n')
+        }
+
+        function gameover(rmove, cmove) {
+            if (board[0][cmove] === board[1][cmove] && board[0][cmove] === board[2][cmove] && board[1][1] != "_") {
+                return true
+            }
+            if (board[rmove][0] === board[rmove][1] && board[rmove][0] === board[rmove][2] && board[1][1] != "_") {
+                return true
+            }
+            if (board[0][0] === board[1][1] && board[0][0] === board[2][2] && board[1][1] != "_") {
+                return true
+            }
+            if (board[0][2] === board[1][1] && board[0][2] === board[2][0] && board[1][1] != "_") {
+                return true
+            }
+            return false
 
 
 
+        }
     }
-
 
 
 }
