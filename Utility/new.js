@@ -373,6 +373,22 @@ module.exports = {
 
 
         }
+    },
+//
+
+    machine(note,count,amount){
+        for (let i = 0; i < 9; i++) { 
+            if (amount >= note[i]) { 
+                count[i] =Math.floor(amount / note[i])
+                amount = amount - count[i] * note[i]; 
+            } 
+        } 
+           for (let j = 0; j <count.length; j++) {
+               console.log(note[j]+':  '+count[j])
+               
+               
+           }
+
     }
 
 
