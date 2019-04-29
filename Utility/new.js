@@ -85,7 +85,7 @@ module.exports = {
     coupon(p) {
         let arr = []
         for (let index = 0; index < p; index++) {
-            var random = Math.floor(Math.random()*p)
+            var random = Math.floor(Math.random() * p)
             arr[index] = random
 
             for (let index1 = 0; index1 < index; index1++) {
@@ -302,11 +302,9 @@ module.exports = {
 
 
         var turn = 'x'
-        var col
-        var row
         var board = []
         var str = ' '
-        var document
+
         {
             for (let i = 0; i < 3; i++) {
                 board.push([])
@@ -319,7 +317,7 @@ module.exports = {
         function play() {
 
             var playing = true
-            while (playing > 0) {
+            while (playing) {
                 const read = require('readline-sync')
                 var row = read.question('enter the rows number')
                 var col = read.question(' enter the colum number')
@@ -374,22 +372,95 @@ module.exports = {
 
         }
     },
-//
+    //
 
-    machine(note,count,amount){
-        for (let i = 0; i < 9; i++) { 
-            if (amount >= note[i]) { 
-                count[i] =Math.floor(amount / note[i])
-                amount = amount - count[i] * note[i]; 
-            } 
-        } 
-           for (let j = 0; j <count.length; j++) {
-               console.log(note[j]+':  '+count[j])
-               
-               
-           }
+    machine(note, count, amount) {
+        for (let i = 0; i < 9; i++) {
+            if (amount >= note[i]) {
+                count[i] = Math.floor(amount / note[i])
+                amount = amount - count[i] * note[i];
+            }
+        }
+        for (let j = 0; j < count.length; j++) {
+            console.log(note[j] + ':  ' + count[j])
 
+
+        }
+
+    },
+
+
+
+    // decimal to binary convertion
+
+    decimaltobinary(n) {
+
+
+        bin = '';
+        while (n > 0) {
+            bin = (n % 2) + bin;
+            n = Math.floor(n / 2)
+
+        }
+        var output = parseInt(bin)
+        console.log(output)
+        return bin
+    },
+
+    /*Write Binary.java to read an integer as an Input, convert to Binary using toBinary
+    function and perform the following functions.
+    i. Swap nibbles and find the new number.
+    ii. Find the resultant number is the number is a power of 2.*/
+    swapnibble(n) {
+        var output = ((n & 0x0F) << 4 | (n & 0xF0) >> 4);
+        console.log(output)
+    },
+
+
+    prime(n) {
+        for (let i = 1; i < n; i++) {
+            {
+                var isprime = true;
+                for (let j = 2; j < i; j++) {
+                    if (i % j == 0) {
+                        isprime = false;
+                        break;
+                    }
+                }
+                if (isprime)
+                    console.log(i)
+                    
+            }
+
+        }
+
+    },
+    // prime palindrome number
+    primepalindrome(n) {
+      var rev=0
+      var i
+        var t = n
+        
+        while (n > 0) {
+
+             rev = rev * 10 + (n % 10)
+           n = Math.floor(n / 10)
+            
+        }
+        if (rev == t) 
+        {
+    
+            for (var i = 2; i < rev; i++) {
+                if (rev % i == 0) {
+                    console.log(i + " is not a prime palindrome number")
+                    break;
+                }
+            }
+            if (rev == i)
+                console.log(t + " is a prime palindrome number")
+        }
+            else
+                console.log(t + " is not a  palindrome number")
+        
     }
-
-
 }
