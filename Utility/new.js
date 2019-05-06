@@ -7,26 +7,17 @@ module.exports = {
         var s2 = s1.replace("<<UserName>>", s);
         console.log(s2);
     },
-/******************************************************************************************** */
 
     // 3.leap year program
     leapyear(y) {
-        if ((y % 4 == 0 && y % 100 != 0) || (y % 400 == 0))
-        { 
+        if ((y % 4 == 0 && y % 100 != 0) || (y % 400 == 0)) {
             console.log('this year is leap year')
-            return true;
-        
         }
-        else 
-        
+        else {
             console.log("this year is not a leap year")
-            return false
-    
-
+        }
     },
 
-
-/******************************************************************************************************** */
     // 4 .power of Power of 2
 
     poweroftwo(p) {
@@ -38,8 +29,6 @@ module.exports = {
         }
 
     },
-/******************************************************************************** */
-
 
 
     // find the hormonic number
@@ -52,7 +41,6 @@ module.exports = {
         }
         console.log(' this is the final hormonic value ' + value)
     },
-/*************************************************************************************** */
 
     // prime factor  program  
     primefactor(p) {
@@ -68,8 +56,6 @@ module.exports = {
             console.log(p)
         }
     },
-/********************************************************************************************* */
-
 
     //2. Flip Coin and print percentage of Heads and Tails
 
@@ -94,12 +80,9 @@ module.exports = {
         console.log('loss perc=' + lossperc)
     },
 
-    /************************************************************************************* */
-
-
     //// coupon program 
     coupon(p) {
-        var arr = []
+        let arr = []
         for (let index = 0; index < p; index++) {
             var random = Math.floor(Math.random() * p)
             arr[index] = random
@@ -118,8 +101,6 @@ module.exports = {
 
 
     },
-/****************************************************************************************** */
-
 
 
     // program of Sum of three Integer adds to ZERO
@@ -137,8 +118,6 @@ module.exports = {
         }
 
     },
-/***************************************************************************************** */
-
 
 
     // gamler program 
@@ -177,10 +156,6 @@ module.exports = {
         console.log('loss perc is=' + lossperc)
 
     },
-/********************************************************************************************* */
-
-
-
 
     // two D array program
 
@@ -196,8 +171,6 @@ module.exports = {
         }
         return arr
     },
-    /******************************************************************************************** */
-
 
     //  program of Simulate Stopwatch Program
 
@@ -206,16 +179,13 @@ module.exports = {
         r = stop - start
         return r
     },
-    /****************************************************************************** */
-
 
     // binarysearch program
 
-    
-    binarysearch: function (arr, ele,l) {
+    binarysearch(arr, ele) {
         var n = 0;
         var m = 0;
-       var l=l;
+        var l = arr.length - 1;
         while (n < l) {
             m = Math.floor((l + n) / 2);
 
@@ -230,8 +200,6 @@ module.exports = {
         }
         return -1;
     },
-/*********************************************************************** */
-
 
     // bubblesort program
     bubblesort(arr) {
@@ -250,7 +218,6 @@ module.exports = {
         return arr
 
     },
-/********************************************************************** */
 
 
     // insortionsort program
@@ -274,17 +241,14 @@ module.exports = {
 
         return array
     },
-    /*********************************************************************** */
-
 
     //  program of An Anagram Detection Example 
 
-
     anagram(s1, s2) {
 
-        s1 = s1.toLowerCase() 
+        s1 = s1.toLowerCase()
         s2 = s2.toLowerCase()
-        var utility = require('./new')
+        var utility = require('../Utility/new')
         s1 = utility.bubblesort(s1)
         s1 = utility.bubblesort(s2)
         var array1 = s1.split(" ");
@@ -303,8 +267,6 @@ module.exports = {
 
 
     },
-    /*********************************************************************** */
-
 
     // quadrantic equation program
 
@@ -320,8 +282,8 @@ module.exports = {
         console.log(root2)
 
         //2 5 3
+
     },
-/***************************************************************************************** */
 
 
     // windchill program 
@@ -331,7 +293,6 @@ module.exports = {
         wind = 35.74 + 0.6215 * temp + (0.4275 * temp - 35.75) * Math.pow(speed, 0.16);
         console.log(wind)
     },
-/****************************************************************************** */
 
     //tic tac tae program 
 
@@ -409,11 +370,6 @@ module.exports = {
 
         }
     },
-    /****************************************************************************** */
-
-
-    // vending machine
-
     machine(note, count, amount) {
         for (let i = 0; i < 9; i++) {
             if (amount >= note[i]) {
@@ -429,7 +385,6 @@ module.exports = {
 
     },
 
-/******************************************************************** */
 
     // decimal to binary convertion
 
@@ -457,8 +412,6 @@ module.exports = {
     },
 
 
-    /************************************************* */
-/// 1 to n prime number
     prime(n) {
         for (let i = 1; i < n; i++) {
             {
@@ -477,8 +430,6 @@ module.exports = {
         }
 
     },
-    
-    /******************************************************* */
     // prime palindrome number
     primepalindrome(n) {
       var rev=0
