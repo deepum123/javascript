@@ -43,7 +43,7 @@ peak()
     if(this.top==-1)
     console.log("stack is empty")
     else
-    console.log(this.items[top])
+    console.log(this.items[this.top])
 }
 
 /**
