@@ -18,7 +18,7 @@ class Queue{
 *   @description enque method for add the data to queue
 */
 enque(data){
-    console.log(data)
+   // console.log(data)
 
 if(this.front== -1)
 {

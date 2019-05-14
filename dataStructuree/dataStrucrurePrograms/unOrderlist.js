@@ -63,4 +63,4 @@ catch(err)
 }
 
  
-module.exports=output;
+module.exports={output,b};

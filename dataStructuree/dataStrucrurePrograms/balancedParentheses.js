@@ -21,7 +21,7 @@ var utility=require('../implementation/stack')
 
 
 {
-        var string = "[(5+6)*(7+8)/(4+3)(5+6)*(7+8)/(4+3)]";
+        var string = "[{5+6)*(7+8)/(4+3)(5+6)*(7+8)/(4+3}]";
         var exp=string.split(" ")
         var value=areParenthesisBalanced(exp)
         if (areParenthesisBalanced(exp))

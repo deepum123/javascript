@@ -55,4 +55,6 @@ else
 
 }
 
-module.exports=output;
+module.exports={output
+    ,result}
+    ;

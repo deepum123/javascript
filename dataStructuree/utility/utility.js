@@ -71,7 +71,7 @@ module.exports={
      * @param  ii =number
      * @param  jj =number
      */
-    findAnaPrime(ii, jj) {
+             findAnaPrime(ii, jj) {
         var primes = this.findPrime(ii, jj);
         var n = primes.length;
 
